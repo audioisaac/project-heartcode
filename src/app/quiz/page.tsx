@@ -50,7 +50,21 @@ import {
 export default function Quiz() {
   return (
     <div>
-      this is the quiz page
+
+      {/* START CODING HERE */}
+      <p>Methamphetamine, heroin, and cannabis were the three most commonly 
+abused drugs in Singapore. 1,621 methamphetamine abusers (52%), 1,039 heroin 
+abusers (33%), and 276 cannabis abusers (9%) were arrested in 2023.</p>
+
+<p>Negative effects of drugs include:
+Associated health issues such as lung or heart disease, stroke, cancer, or mental health conditions.
+Damage to the brain, heart, liver, lungs, and kidneys.
+Increased risk of cancer.
+Abnormal vital signs, sleep changes, decreased memory, and cognitive abilities.
+Nausea, vomiting, diarrhea, stomach pain.
+Legal consequences, financial problems, injuries, and death.</p>
+
+      {/* END CODING HERE */}
     </div>
   );
 
