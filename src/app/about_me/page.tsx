@@ -46,38 +46,19 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+"use client";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
+const words = `Hi! We are Shiloh and Dylan :)
+`;
 
 
 export default function Home() {
   return (
     <div>
-      <Card>
-        <CardHeader>
-          <CardTitle> Don't do Drugs </CardTitle>
-          <CardDescription>We will be talking about the side effects and negetive effects of taking/ doing drugs  </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p> Why are drugs harmful? </p>
-        </CardContent>
-        <CardFooter>
-          <p> Consequences for doing drugs </p>
-        </CardFooter>
-      </Card>
-      <Input type="What's on your mind" placeholder="What's on your mind" />
-
-      <Alert>
-        <Terminal className="h-4 w-4" />
-        <AlertTitle> Drugs = LifeTime Regret </AlertTitle>
-        <AlertDescription>
-          If you do drugs you're gonna end up like dinosaurs
-        </AlertDescription>
-      </Alert>
-
-      <p> Here's more information on the side effects of drugs and etc.</p>
-
-      <Button> Click Here </Button>
-
+      <TextGenerateEffect words={words} />
     </div>
   );
 
 }
+
