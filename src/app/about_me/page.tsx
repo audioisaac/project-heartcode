@@ -48,17 +48,25 @@ import {
 } from "@/components/ui/navigation-menu"
 "use client";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import React from "react";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
-const words = `Hi! We are Shiloh and Dylan :)
+const words = `
 `;
+
 
 
 export default function Home() {
   return (
     <div>
-      <TextGenerateEffect words={words} />
+      <BackgroundGradientAnimation>
+        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+          <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+            <TextGenerateEffect words={words} />
+          </p>
+        </div>
+      </BackgroundGradientAnimation>
     </div>
   );
-
 }
 
