@@ -46,38 +46,27 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+"use client";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import React from "react";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+
+const words = `
+`;
+
 
 
 export default function Home() {
   return (
     <div>
-      <Card>
-        <CardHeader>
-          <CardTitle> Don't do Drugs </CardTitle>
-          <CardDescription>We will be talking about the side effects and negetive effects of taking/ doing drugs  </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p> Why are drugs harmful? </p>
-        </CardContent>
-        <CardFooter>
-          <p> Consequences for doing drugs </p>
-        </CardFooter>
-      </Card>
-      <Input type="What's on your mind" placeholder="What's on your mind" />
-
-      <Alert>
-        <Terminal className="h-4 w-4" />
-        <AlertTitle> Drugs = LifeTime Regret </AlertTitle>
-        <AlertDescription>
-          If you do drugs you're gonna end up like dinosaurs
-        </AlertDescription>
-      </Alert>
-
-      <p> Here's more information on the side effects of drugs and etc.</p>
-
-      <Button> Click Here </Button>
-
+      <BackgroundGradientAnimation>
+        <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
+          <p className="bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-white/80 to-white/20">
+            <TextGenerateEffect words={words} />
+          </p>
+        </div>
+      </BackgroundGradientAnimation>
     </div>
   );
-
 }
+
