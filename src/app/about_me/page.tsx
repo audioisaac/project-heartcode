@@ -60,9 +60,9 @@ const words = `
 const cards = [
   {
     title: "Cocaine",
-    src: Cocaine
-  },
-];
+    src: Cocaine.src
+  }
+]
 
 
 
