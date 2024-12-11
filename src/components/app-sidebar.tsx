@@ -1,4 +1,17 @@
+"use client"
 import { Calendar, FileQuestionIcon, Home, Inbox, Search, Settings } from "lucide-react"
+import { ThemeProvider } from "@/components/ui/theme-provider"
+import * as React from "react"
+import { Moon, MoonIcon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 import {
   Sidebar,
@@ -10,6 +23,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { ModeToggle } from "./mode-toggle"
+
 
 // Menu items.
 const items = [
@@ -33,6 +48,7 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
+      <ModeToggle></ModeToggle>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -57,4 +73,3 @@ export function AppSidebar() {
 }
 
 
-  
