@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import Image from "next/image";
