@@ -53,24 +53,13 @@ import { BackgroundGradientAnimation } from "@/components/ui/background-gradient
 import { FocusCards } from "@/components/ui/focus-cards";
 import Cocaine from "@/assets/cocaine.jpg";
 
-const words = `
+const words = `hello
 `
-
-
-const cards = [
-  {
-    title: "Cocaine",
-    src: Cocaine
-  },
-];
-
-
-
 
 export default function Home() {
   return (
     <div>
-            <FocusCards cards={cards} />  
+      <FocusCards cards={cards} />  
     </div>
   );
 }
