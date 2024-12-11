@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import {
@@ -46,7 +47,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-"use client";
+
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import React from "react";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
@@ -59,7 +60,7 @@ const words = `hello
 export default function Home() {
   return (
     <div>
-      <FocusCards cards={Card} />  
+      {/* <FocusCards cards={Card} />   */}
     </div>
   );
 }

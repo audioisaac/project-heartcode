@@ -14,6 +14,8 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+import { ThemeProvider } from "@/components/theme_provider"
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,6 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
         <SidebarProvider>
           <AppSidebar />
           <main>
@@ -37,6 +45,7 @@ export default function RootLayout({
             {children}
           </main>
         </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
