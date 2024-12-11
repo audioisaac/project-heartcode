@@ -59,7 +59,7 @@ const words = `hello
 export default function Home() {
   return (
     <div>
-      <FocusCards cards={cards} />  
+      <FocusCards cards={Card} />  
     </div>
   );
 }
