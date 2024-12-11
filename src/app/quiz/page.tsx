@@ -62,35 +62,25 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
+  question1: z.string().max(50 , {message : "your answer too long"}),
+  question2: z.string().max(50 , {message : "your answer too long"}),
+  question3: z.string().max(50 , {message : "your answer too long"}),
+  question4: z.string().max(50 , {message : "your answer too long"}),
 })
 
-// export default function Quiz() {
-//   return (
-//     <div>
-//       {/* START CODING HERE */}
-//       <p>Methamphetamine, heroin, and cannabis were the three most commonly 
-// abused drugs in Singapore. 1,621 methamphetamine abusers (52%), 1,039 heroin 
-// abusers (33%), and 276 cannabis abusers (9%) were arrested in 2023.</p>
-
-// <p>Negative effects of drugs include:
-// Associated health issues such as lung or heart disease, stroke, cancer, or mental health conditions.
-// Damage to the brain, heart, liver, lungs, and kidneys.
-// Increased risk of cancer.
-// Abnormal vital signs, sleep changes, decreased memory, and cognitive abilities.
-// Nausea, vomiting, diarrhea, stomach pain.
-// Legal consequences, financial problems, injuries, and death.</p>
-
-//       {/* END CODING HERE */}
-//     </div>
-//   );
-
-// }
 
 export default function ProfileForm() {
   // 1. Define your form.
@@ -100,31 +90,128 @@ export default function ProfileForm() {
       username: "",
     },
   })
- 
+
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
   }
 
   return (
+
+
+
+
+    // touch this line onwards
+
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
-          name="username"
+          name="question1"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>What do YOU think about drugs?</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+              
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
+
+
+
+
+
+        <FormField
+          control={form.control} 
+          name="question2"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>How do you think drugs are made?</FormLabel>
+              <FormControl>
+                <Input placeholder="" {...field} />
+              </FormControl>
+              <FormDescription>
+              
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+
+
+
+
+        <FormField
+          control={form.control}
+          name="question3"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Do you think drugs are beneficial OR disadvantageous?</FormLabel>
+              <FormControl>
+                <Input placeholder="" {...field} />
+              </FormControl>
+              <FormDescription>
+            
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+
+
+        <FormField
+          control={form.control}
+          name="question4"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>How many people LOVE drugs and take them each year?</FormLabel>
+              <FormControl>
+                <Input placeholder="" {...field} />
+              </FormControl>
+              <FormDescription>
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+
+
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Do you think taking drugs is legal? </FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormControl>
+                <SelectTrigger>
+                  <SelectValue placeholder="Please select an answer"/>
+                </SelectTrigger>
+                
+              </FormControl>
+              <SelectContent>
+                <SelectItem value="yes">Yes</SelectItem>
+                <SelectItem value="no">No</SelectItem>
+              </SelectContent>
+              <FormDescription>
+              </FormDescription>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+
+
+
         <Button type="submit">Submit</Button>
       </form>
     </Form>
