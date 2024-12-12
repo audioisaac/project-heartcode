@@ -1,18 +1,30 @@
-"use client"
-import { Calendar, FileQuestionIcon, Home, Inbox, Search, Settings } from "lucide-react"
-import { ThemeProvider } from "@/components/ui/theme-provider"
-import * as React from "react"
-import { Moon, MoonIcon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
-import { Button } from "@/components/ui/button"
+"use client";
+import {
+  Calendar,
+  FileQuestionIcon,
+  Home,
+  Inbox,
+  Search,
+  Settings,
+} from "lucide-react";
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import * as React from "react";
+import { Moon, MoonIcon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-
+} from "@/components/ui/dropdown-menu";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 import {
   Sidebar,
@@ -23,15 +35,14 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { ModeToggle } from "./mode-toggle"
-
+} from "@/components/ui/sidebar";
+import { ModeToggle } from "./mode-toggle";
 
 // Menu items.
 const items = [
   {
     title: "Home",
-    url: "/",
+    url: "/about_me",
     icon: Home,
   },
   {
@@ -41,10 +52,10 @@ const items = [
   },
   {
     title: "About me",
-    url: "/about_me",
+    url: "/",
     icon: Calendar,
   },
-]
+];
 
 export function AppSidebar() {
   return (
@@ -54,12 +65,12 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
           <SidebarGroupContent>
-                    <SignedOut>
-                      <SignInButton />
-                    </SignedOut>
-                    <SignedIn>
-                      <UserButton />
-                    </SignedIn>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
@@ -76,7 +87,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  )
+  );
 }
-
-

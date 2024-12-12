@@ -44,10 +44,12 @@ import {
 
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import React from "react";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradie  nt-animation";
 import { FocusCards } from "@/components/ui/focus-cards";
 
 import Cocaine from "../../../public/cocaine.jpg"
+import fentanyl from "../../../public/fentanyl.jpg"
+import cannabis from "../../../public/cannabis.jpg"
 
 const words = `hello
 `
@@ -75,7 +77,7 @@ export default function Home() {
 const CocaineContent = () => {
   return (
     <>
-      {[...new Array(3).fill(1)].map((_, index) => {
+      {[...new Array(1).fill(1)].map((_, index) => {
         return (
           <div
             key={"dummy-content" + index}
@@ -106,7 +108,7 @@ const CocaineContent = () => {
 const FentanylContent = () => {
   return (
     <>
-      {[...new Array(3).fill(1)].map((_, index) => {
+      {[...new Array(1).fill(1)].map((_, index) => {
         return (
           <div
             key={"dummy-content" + index}
@@ -119,7 +121,7 @@ const FentanylContent = () => {
               Fentanyl use can cause respiratory failure, overdose, addiction, and death. Legal consequences include severe criminal charges, long prison sentences, and substantial fines. Possession and trafficking carry particularly harsh penalties due to fentanyl's high potency.
             </p>
             <Image
-              src={Cocaine}
+              src={fentanyl}
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -138,7 +140,7 @@ const FentanylContent = () => {
 const CannabisContent = () => {
   return (
     <>
-      {[...new Array(3).fill(1)].map((_, index) => {
+      {[...new Array(1).fill(1)].map((_, index) => {
         return (
           <div
             key={"dummy-content" + index}
@@ -151,7 +153,7 @@ const CannabisContent = () => {
               Cannabis use can cause memory issues, impaired coordination, anxiety, and addiction. Legal consequences vary by location, with fines, criminal charges, and imprisonment for illegal possession or distribution. Some regions impose strict penalties for trafficking.
             </p>
             <Image
-              src={Cocaine}
+              src={cannabis}
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
@@ -174,13 +176,13 @@ const data = [
   {
     category: "Fentanyl",
     title: "Diminish your productivity.",
-    src: Cocaine,
+    src: fentanyl,
     content: <FentanylContent />,
   },
   {
     category: "Cannabis",
     title: "Drugs = Bad",
-    src: Cocaine,
+    src: cannabis,
     content: <CannabisContent />,
   }
 ];
