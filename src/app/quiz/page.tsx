@@ -131,7 +131,7 @@ export default function ProfileForm() {
           name="question2"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>How do you think drugs are made?</FormLabel>
+              <FormLabel>What do you think should be done to prevent drug abuse in communities?</FormLabel>
               <FormControl>
                 <Input placeholder="" {...field} />
               </FormControl>
@@ -171,7 +171,7 @@ export default function ProfileForm() {
           name="question4"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>How many people LOVE drugs and take them each year?</FormLabel>
+              <FormLabel>What do you think are the most significant risks associated with drug use?</FormLabel>
               <FormControl>
                 <Input placeholder="" {...field} />
               </FormControl>
@@ -181,7 +181,7 @@ export default function ProfileForm() {
             </FormItem>
           )}
         />
-        
+
 
 
 
