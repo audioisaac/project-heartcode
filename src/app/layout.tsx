@@ -15,6 +15,10 @@ const geistMono = localFont({
   weight: "100 900",
 });
 import { ThemeProvider } from "@/components/theme_provider"
+import { ClerkProvider } from "@clerk/nextjs";
+
+
+
 
 
 export const metadata: Metadata = {
@@ -28,6 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
+
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -38,16 +44,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          
-        <SidebarProvider>
-          <AppSidebar />
-          <main>
-            <SidebarTrigger />
-            {children}
-          </main>
-        </SidebarProvider>
+          <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarProvider>
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
+
   );
 }
