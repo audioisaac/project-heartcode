@@ -31,7 +31,7 @@ import { ModeToggle } from "./mode-toggle"
 const items = [
   {
     title: "Home",
-    url: "/",
+    url: "/about_me",
     icon: Home,
   },
   {
@@ -41,7 +41,7 @@ const items = [
   },
   {
     title: "About me",
-    url: "/about_me",
+    url: "/",
     icon: Calendar,
   },
 ]
