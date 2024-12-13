@@ -54,7 +54,7 @@ export default function Home() {
       <Card>
         <CardHeader>
           <CardTitle> Don't do Drugs </CardTitle>
-          <CardDescription>We will be talking about the side effects and negetive effects of taking/ doing drugs  </CardDescription>
+          <CardDescription>We will be talking about the side effects and negative effects of taking/ doing drugs  </CardDescription>
         </CardHeader>
         <CardContent>
           <p> Why are drugs harmful? </p>
