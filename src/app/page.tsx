@@ -8,7 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Navigation, Terminal } from "lucide-react"
+
+import { Navigation, ShieldOff, Terminal } from "lucide-react"
 
 import {
   Alert,
@@ -46,37 +47,43 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-
+import shiloh from "../../public/shiloh.jpg"
+import dylan from "../../public/dylan.jpg"
 
 export default function Home() {
   return (
-    <div>
+    <div className = 'flex flex-row'>
       <Card>
         <CardHeader>
-          <CardTitle> Don't do Drugs </CardTitle>
-          <CardDescription>We will be talking about the side effects and negative effects of taking/ doing drugs  </CardDescription>
+          <CardTitle> I'm Shiloh </CardTitle>
+          <CardDescription> I like football </CardDescription>
         </CardHeader>
         <CardContent>
-          <p> Why are drugs harmful? </p>
+          <Image src = {shiloh} width ={500}alt = "1"/> 
+        </CardContent>
+        <CardContent>
+          <p> I made the home page on this website </p>
         </CardContent>
         <CardFooter>
-          <p> Consequences for doing drugs </p>
+          <p> Don't do drugs, it's bad for you </p>
         </CardFooter>
       </Card>
-      <Input type="What's on your mind" placeholder="What's on your mind" />
 
-      <Alert>
-        <Terminal className="h-4 w-4" />
-        <AlertTitle> Drugs = LifeTime Regret </AlertTitle>
-        <AlertDescription>
-          If you do drugs you're gonna end up like dinosaurs
-        </AlertDescription>
-      </Alert>
-
-      <p> Here's more information on the side effects of drugs and etc.</p>
-
-      <Button> Click Here </Button>
-
+      <Card>
+        <CardHeader>
+          <CardTitle> I'm Dylan </CardTitle>
+          <CardDescription> I like anime </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Image src = {dylan} width ={500}alt = "1"/> 
+        </CardContent>
+        <CardContent>
+          <p> I made the Quiz section on this website </p>
+        </CardContent>
+        <CardFooter>
+          <p> Drugs are bad for you, they harm you and your family.</p>
+        </CardFooter>
+      </Card>
     </div>
   );
 
