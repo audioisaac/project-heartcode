@@ -72,7 +72,7 @@ export default function Home() {
       <Card>
         <CardHeader>
           <CardTitle> I'm Dylan </CardTitle>
-          <CardDescription> I like anime </CardDescription>
+          <CardDescription> I like sleeping </CardDescription>
         </CardHeader>
         <CardContent>
           <Image src = {dylan} width ={500}alt = "1"/> 
