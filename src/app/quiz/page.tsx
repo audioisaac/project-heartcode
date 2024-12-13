@@ -13,30 +13,30 @@ interface Item {
  
 let notifications = [
   {
-    name: "Payment received",
-    description: "Magic UI",
+    name: "Sergei",
+    description: "I hate drugs",
     time: "15m ago",
  
     icon: "💸",
     color: "#00C9A7",
   },
   {
-    name: "User signed up",
-    description: "Magic UI",
+    name: "Jeff",
+    description: "I caught someone taking drugs and reported him",
     time: "10m ago",
     icon: "👤",
     color: "#FFB800",
   },
   {
-    name: "New message",
-    description: "Magic UI",
+    name: "Rian",
+    description: "Drugs are the worst",
     time: "5m ago",
     icon: "💬",
     color: "#FF3D71",
   },
   {
-    name: "New event",
-    description: "Magic UI",
+    name: "John",
+    description: "Drugs are expensive and i am broke, so no drugs.",
     time: "2m ago",
     icon: "🗞️",
     color: "#1E86FF",
