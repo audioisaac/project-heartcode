@@ -203,121 +203,103 @@ export default function ProfileForm() {
 
 
     // touch this line onwards
-
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField
-          control={form.control}
-          name="question1"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>What do YOU think about drugs?</FormLabel>
-              <FormControl>
-                <Input placeholder="" {...field} />
-              </FormControl>
-              <FormDescription>
-              
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-
-
-
-
-        <FormField
-          control={form.control} 
-          name="question2"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>What do you think should be done to prevent drug abuse in communities?</FormLabel>
-              <FormControl>
-                <Input placeholder="" {...field} />
-              </FormControl>
-              <FormDescription>
-              
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-
-
-
-
-        <FormField
-          control={form.control}
-          name="question3"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Do you think drugs are beneficial OR disadvantageous?</FormLabel>
-              <FormControl>
-                <Input placeholder="" {...field} />
-              </FormControl>
-              <FormDescription>
-            
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-
-
-        <FormField
-          control={form.control}
-          name="question4"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>What do you think are the most significant risks associated with drug use?</FormLabel>
-              <FormControl>
-                <Input placeholder="" {...field} />
-              </FormControl>
-              <FormDescription>
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-
-
-
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Do you think taking drugs is legal? </FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-              <FormControl>
-                <SelectTrigger>
-                  <SelectValue placeholder="Please select an answer"/>
-                </SelectTrigger>
+    <div className="flex flex-row">
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FormField
+            control={form.control}
+            name="question1"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>What do YOU think about drugs?</FormLabel>
+                <FormControl>
+                  <Input placeholder="" {...field} />
+                </FormControl>
+                <FormDescription>
                 
-              </FormControl>
-              <SelectContent>
-                <SelectItem value="yes">Yes</SelectItem>
-                <SelectItem value="no">No</SelectItem>
-              </SelectContent>
-              <FormDescription>
-              </FormDescription>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control} 
+            name="question2"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>What do you think should be done to prevent drug abuse in communities?</FormLabel>
+                <FormControl>
+                  <Input placeholder="" {...field} />
+                </FormControl>
+                <FormDescription>
+                
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question3"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Do you think drugs are beneficial OR disadvantageous?</FormLabel>
+                <FormControl>
+                  <Input placeholder="" {...field} />
+                </FormControl>
+                <FormDescription>
+              
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="question4"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>What do you think are the most significant risks associated with drug use?</FormLabel>
+                <FormControl>
+                  <Input placeholder="" {...field} />
+                </FormControl>
+                <FormDescription>
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="username"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Do you think taking drugs is legal? </FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Please select an answer"/>
+                  </SelectTrigger>
+                  
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="yes">Yes</SelectItem>
+                  <SelectItem value="no">No</SelectItem>
+                </SelectContent>
+                <FormDescription>
+                </FormDescription>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type="submit">Submit</Button>
+        </form>
+      </Form>
 
-        <div classname = "flex flex-row"> 
-          <AnimatedListDemo/>
-        </div>
-
-
-        <Button type="submit">Submit</Button>
-      </form>
-    </Form>
+      <div className = "relative flex flex-row"> 
+        <AnimatedListDemo/>
+      </div>
+    </div>
   )
 }
